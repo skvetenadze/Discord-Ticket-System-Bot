@@ -1,3 +1,4 @@
+require('dotenv').config();
 const fs = require('fs');
 const {
   Client,
@@ -6,6 +7,9 @@ const {
 } = require('discord.js');
 const chalk = require('chalk')
 const config = require('./config.json');
+
+config.token = process.env.TOKEN;
+config.clientId = process.env.CLIENT_ID;
 
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS],
@@ -51,4 +55,4 @@ client.on('interactionCreate', async interaction => {
   };
 });
 
-client.login(require('./config.json').token);
+client.login(config.token);
