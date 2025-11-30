@@ -8,8 +8,8 @@ A discord ticket bot with buttons & slash commands
 You need to have Node.JS 16+
 
 ``````bash
-git clone https://github.com/blackknight683/tickety-v2
-cd tickety-v2
+git clone https://github.com/skvetenadze/Discord-Ticket-System-Bot
+cd Discord-Ticket-System-Bot
 npm i
 ``````
 
