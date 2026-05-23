@@ -37,7 +37,7 @@ module.exports = {
 
         const embed = new client.discord.MessageEmbed()
           .setColor('6d6ee8')
-          .setAuthor({name: `${interaction.user.username}'s Ticket`, iconURL: 'https://i.imgur.com/oO5ZSRK.png'})
+          .setAuthor({name: `${interaction.user.username}'s Ticket`})
           .setDescription('Select the category of your ticket')
           .setFooter({text: `${client.user.tag}`, iconURL: client.user.displayAvatarURL()})
           .setTimestamp();
@@ -55,7 +55,7 @@ module.exports = {
               {
                 label: client.config.Category2,
                 value: client.config.Category2,
-                emoji: '🎟️',
+                emoji: '<:tracky:1507470272758808636>',
               },
               {
                 label: client.config.Category3,
@@ -73,7 +73,7 @@ module.exports = {
 
         const collector = msg.createMessageComponentCollector({
           componentType: 'SELECT_MENU',
-          time: 60000 //60 seconds
+          time: 1800000 //30 mins
         });
 
         collector.on('collect', i => {
