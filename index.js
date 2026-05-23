@@ -35,7 +35,7 @@ for (const file of eventFiles) {
 };
 
 client.on("ready", async() => {
-  client.user.setActivity({ name: "Watching Tracky.click", type: "LISTENING" })
+  client.user.setActivity({ name: "Answering Tracky Tickets", type: "LISTENING" })
   })
 
 client.on('interactionCreate', async interaction => {
